@@ -1,0 +1,31 @@
+html:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="task4">
+        <p class="p">Hello world</p>
+    <button class="mode">  change style</button>
+    <button class="mode2">  set to original</button>
+    </div>
+    
+    <script src="task4.js"></script>
+</body>
+</html>
+css:.change-style {
+    color: red;      
+    font-size: 24px; 
+}
+js:function changemode(){
+   document.querySelector(".p") .classList.add("change-style")
+}
+function settooriginal(){
+    document.querySelector(".p") .classList.remove("change-style")
+ }
+ document.querySelector(".mode2").onclick=settooriginal
+ 
+document.querySelector(".mode").onclick=changemode
