@@ -1,0 +1,37 @@
+js:
+const products = [
+    "Laptop",
+    "Smartphone",
+    "Tablet",
+    "Headphones",
+    "Smartwatch",
+    "Bluetooth Speaker",
+    "Camera",
+    "Keyboard",
+    "Mouse",
+    "Monitor"
+];
+
+let content="";
+for (let i = 0; i < products.length; i++) {
+    content+= `<div class="user">
+              <h2>${products[i]}</h2>
+              </div>
+
+    `
+}
+document.body.innerHTML = content;
+html:<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="Task5.css">
+</head>
+<body>
+   
+
+    <script src="Task5.js"></script>
+</body>
+</html>
