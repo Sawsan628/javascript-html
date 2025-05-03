@@ -1,0 +1,15 @@
+var link = new XMLHttpRequest();
+link.open("GET", "https://jsonplaceholder.typicode.com/posts");
+link.onload = function() {
+  var data = JSON.parse(link.responseText);
+  var html = data.map(function(post) {
+    return `
+      <div class="post">
+        <h2>${post.title}</h2>
+        <p>${post.body}</p>
+      </div>
+    `;
+  }).join('');
+  document.getElementById("posts").innerHTML = html;
+};
+link.send();
